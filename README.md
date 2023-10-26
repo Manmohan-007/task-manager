@@ -10,5 +10,7 @@ In the project directory, you can run:/
 
 ### `npm start`
 
+### Check here - https://main--comforting-piroshki-23508f.netlify.app/
+
 
 
