@@ -1,7 +1,7 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { RecoilRoot } from "recoil";
 import { BrowserRouter } from "react-router-dom";
+import { Bounce, ToastContainer } from "react-toastify";
 
 import "./index.scss";
 import App from "./App";
@@ -16,6 +16,14 @@ root.render(
     <RecoilRoot>
       <BrowserRouter>
         <App />
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          closeOnClick
+          pauseOnHover
+          transition={Bounce}
+        />
       </BrowserRouter>
     </RecoilRoot>
   </>

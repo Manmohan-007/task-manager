@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-import { useLocalStorage } from "common";
+import { useLocalStorage, useNotification } from "common";
 import { useEffect, useMemo } from "react";
 import { useRecoilState } from "recoil";
 import { v4 as uuidv4 } from "uuid";
@@ -23,6 +23,7 @@ export function useTaskManager() {
   const [selectedTaskFilter, setSelectedTaskFilter] = useRecoilState(
     selectedTaskFilterState
   );
+  const { successNotification } = useNotification();
 
   const { allTasksList } = taskLists;
 
@@ -43,11 +44,13 @@ export function useTaskManager() {
     };
     setTaskLists(payload);
     setLocalStorage("tasks", payload);
+    successNotification("Task created successfully");
   };
 
   const updateTask = (_taskId: string) => {
     // we need id if we will use the api and db
     setLocalStorage("tasks", taskLists);
+    successNotification("Task updated successfully");
   };
 
   const changeTaskStatus = (taskId: string, status: IStatus) => {
@@ -59,6 +62,7 @@ export function useTaskManager() {
       allTasksList: [...updatedList],
     };
     setTaskLists(payload);
+    successNotification("Task status changed");
   };
 
   const deleteTask = (taskId: string) => {
@@ -71,6 +75,7 @@ export function useTaskManager() {
     };
     setTaskLists(payload);
     setLocalStorage("tasks", payload);
+    successNotification("Task deleted successfully");
   };
 
   const changeFilter = (selectedOptions: string[]): void => {

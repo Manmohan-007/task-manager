@@ -1,6 +1,6 @@
-import React, { createRef, useState } from "react";
+import { createRef, useState } from "react";
+import { useOutsideClick } from "common";
 import { ICheckboxDropdownProps } from "./types";
-import { useOutsideClick } from "common/hooks/useOutsideClick";
 
 export const CheckboxDropdown = ({
   options,
