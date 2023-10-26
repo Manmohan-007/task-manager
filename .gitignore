@@ -1,0 +1,48 @@
+# Dependency directories
+/node_modules
+
+# Environment variables file
+.env
+
+# Build files
+/build
+
+# Log files
+*.log
+
+# macOS Finder files
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# npm debugging log
+npm-debug.log*
+
+# Yarn logs
+yarn-error.log
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Optional: Editor configuration
+.editorconfig
+
+# Optional: Log files from testing frameworks
+test-results.xml
+
+# Optional: Coverage directory
+/coverage
+
+# Optional: Output of nyc coverage tool
+.nyc_output
+
+# Optional: OS generated files
+ehthumbs.db
+Thumbs.db

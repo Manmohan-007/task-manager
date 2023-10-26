@@ -1,0 +1,46 @@
+/* styles.css (or any other CSS file where you define your styles) */
+
+.checkbox-dropdown {
+  position: relative;
+  width: 145px;
+}
+
+.dropdown-header {
+  background-color: #f5f5f5;
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.checkbox-dropdown.open .dropdown-options {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.checkbox-dropdown label {
+  display: block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.checkbox-dropdown label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-dropdown label:hover {
+  background-color: #f0f0f0;
+}
+
+// Header for the table
+/* styles.css (or any other CSS file where you define your styles) */
